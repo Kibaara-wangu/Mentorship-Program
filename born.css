@@ -1,0 +1,59 @@
+#Website{
+    margin-left: 25%;
+    margin-right: 20%;
+    font-size: 25px;
+}
+h1{
+    text-align: center;
+    color: #002053;
+}
+h3{
+    text-align: center;
+
+}
+body{
+    background-color: #8887C1;
+}
+.paragraph{
+    background-color: grey;
+    border-radius: 70px;
+    height: 750px;
+    width: 1000px;
+    color: white;
+    font-style: italic;
+}
+.words{
+    margin-left:5%;
+    margin-right: 5%;
+}
+
+@media screen and (min-width: 280px) and (max-width: 600px) {
+    #Website{
+        margin-left: 5%;
+        margin-right: 2%;
+        font-size: 20px;
+    }
+    h1{
+        text-align: center;
+        color: #002053;
+    }
+    h3{
+        text-align: center;
+    
+    }
+    body{
+        background-color: #8887C1;
+    }
+    .paragraph{
+        background-color: grey;
+        border-radius: 70px;
+        height: 1000px;
+        width: 400px;
+        color: white;
+        font-style: italic;
+    }
+    .words{
+        margin-left:2%;
+        margin-right: 2%;
+    }
+}

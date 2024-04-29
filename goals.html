@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="to-do.css">
+</head>
+<body>
+<script></script>
+<div class="todo">
+      <div class="goal"><h1>My Goals</h1><img src="images/mentorship logo.png" alt="mentorship logo" width="100px" height="100px"></div> <br> <br>
+        <input type="text" id="new-task" placeholder="Enter the goal you want to achieve..">
+        <button id="add-task">Add Goal</button> <br> <br>
+        <ul id="todo-list"></ul>
+      </div>
+        <script>
+          const todoList = document.getElementById('todo-list');
+          const newTaskInput = document.getElementById('new-task');
+          const addTaskButton = document.getElementById('add-task');
+          const tasks = []; // Array to store tasks
+          addTaskButton.addEventListener('click', function() {
+            const task = newTaskInput.value.trim(); // Get task text and trim whitespace
+            if (task) { // Check if task is not empty
+              tasks.push(task);
+              newTaskInput.value = ''; // Clear input field
+              renderTodoList();
+            }
+          });
+          function renderTodoList() {
+            todoList.innerHTML = ''; // Clear existing list items
+            tasks.forEach((task, index) => {
+              const listItem = document.createElement('li');
+              listItem.innerText = task;
+              const deleteButton = document.createElement('button');
+              deleteButton.innerText = 'Delete';
+              deleteButton.addEventListener('click', function() {
+                tasks.splice(index, 1); // Remove task from array
+                renderTodoList();
+              });
+              listItem.appendChild(deleteButton);
+              todoList.appendChild(listItem);
+            });
+          }
+        </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="to-do.css">
+</head>
+<body>
+    <div class="goalheader">
+        <div><h1>Goals</h1></div>
+        <div> <img src="images/mentorship logo.png" alt=""width="200px" height="200px"></div>
+    </div>
+    <div id="goals">
+        <div>
+        <h3>Long-term Goals</h3>
+        <input type="text" placeholder="" ><br> <br>
+        <input type="text" placeholder=""> <br> <br>
+        <input type="text" placeholder="">
+        </div>
+        <div>
+        <h3>Long-term Goals</h3>
+        <input type="text" placeholder=""> <br> <br>
+        <input type="text" placeholder=""> <br> <br>
+        <input type="text" placeholder="">
+    </div>
+</div>
+
+    
+</body>
+</html> -->
