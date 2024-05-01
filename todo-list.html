@@ -1,59 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="to-do.css" />
-  </head>
-  <body>
-    <script></script>
-    <div class="todo">
-      <h1>My To-Do list</h1>
-      <input
-        type="text"
-        id="new-task"
-        placeholder="Enter the task you want to do"
-        class="check"
-      />
-      <button id="add-task">Add Task</button> <br />
-      <br />
-    </div>
-
-      
-      <div class="type">
-      <div>
-        <input type="checkbox"> 
-      </div>
-
-      <div>
-          <button class="task"><a href="Born a Crime.html">NYJ</a></button>
-        </div>
-      </div>    
-      <ul id="view"></ul>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+<h1>My To-Do List</h1>
+<input type="text" id="new-task" placeholder="Add the task you want to do here...">
+    <button  class="add"> Add</button><br>
+    <div class="separate"><input name="checkbox" type="checkbox" ><button class="NYJ"><a href="Born a Crime.html">NYJ</a></button></div>
+    <ul id="todo-list"></ul>
     <script>
-      const todoList = document.getElementById("todo-list");
-      const newTaskInput = document.getElementById("new-task");
-      const addTaskButton = document.getElementById("add-task");
-      const tasks = []; // Array to store tasks
-      addTaskButton.addEventListener("click", function () {
-        const task = newTaskInput.value.trim(); // Get task text and trim whitespace
+      const todoList = document.getElementById('todo-list');
+      const newTaskInput = document.getElementById('new-task');
+      const addTaskButton = document.getElementById('add-task');
+      const tasks = [];
+      addTaskButton.addEventListener('click', function() {
+        const task = newTaskInput.value.trim();
         if (task) {
-          // Check if task is not empty
           tasks.push(task);
-          newTaskInput.value = ""; // Clear input field
+          newTaskInput.value = '';
           renderTodoList();
         }
       });
       function renderTodoList() {
-        todoList.innerHTML = ""; // Clear existing list items
+        todoList.innerHTML = '';
         tasks.forEach((task, index) => {
-          const listItem = document.createElement("li");
+          const listItem = document.createElement('li');
           listItem.innerText = task;
-          const deleteButton = document.createElement("button");
-          deleteButton.innerText = "Delete";
-          deleteButton.addEventListener("click", function () {
-            tasks.splice(index, 1); // Remove task from array
+          const deleteButton = document.createElement('button');
+          deleteButton.innerText = 'Delete';
+          deleteButton.addEventListener('click', function() {
+            tasks.splice(index, 1);
             renderTodoList();
           });
           listItem.appendChild(deleteButton);
@@ -61,5 +42,10 @@
         });
       }
     </script>
-  </body>
+  </section> 
+</div>
+
+</div>
+</body>
 </html>
+  

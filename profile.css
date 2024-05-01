@@ -34,6 +34,46 @@
     border-color: orange;
     border-radius: 30px;
    }
+   /* to do */
+   body{
+      background-color: #8887c1;
+   }
+   h1{
+      background-color: white;
+      width: 700px;
+      border: solid 2px;
+      height: 70px;
+      text-align: center;
+      font-size: 60px;
+   }
+   .add{
+      border: solid 2px;
+      width: 90px;
+      height: 60px;
+      border-radius: 20px;
+      font-size: 20px;
+      color: blue;
+  }
+  input{
+   width: 600px;
+   height: 60px;
+   border-radius: 20px;
+   font-size: 20px;
+  }
+
+.separate{
+   gap: 30px;
+}
+.NYJ{
+   border-radius: 20px;
+   width: 80px;
+   height: 50px;
+   font-size: 20px;
+}
+
+
+
+
 @media screen and (min-width: 280px) and (max-width: 600px) {
 .detail{
    font-size: 20px;
