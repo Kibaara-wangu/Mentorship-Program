@@ -9,10 +9,20 @@
 </head>
 <body>
 <h1>My To-Do List</h1>
-<input type="text" id="new-task" placeholder="Add the task you want to do here...">
+<input type="text" id="new-task" placeholder="Add the task you want to do here..." class="inputb">
     <button  class="add"> Add</button><br>
-    <div class="separate"><input name="checkbox" type="checkbox" ><button class="NYJ"><a href="Born a Crime.html">NYJ</a></button></div>
+
+
+    <!-- <div class="separate"> -->
+      <br>
+      <div>
+        <input type="checkbox" class="checkboxing">
+        <label for="nyj"><a href="Born a Crime.html">NYJ</a></label>
+      </div>
+    </div>
     <ul id="todo-list"></ul>
+
+
     <script>
       const todoList = document.getElementById('todo-list');
       const newTaskInput = document.getElementById('new-task');
